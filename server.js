@@ -1,8 +1,12 @@
 // bring in express
 const express = require('express');
+const connectDB = require('./config/db');
 
 
 const app = express();
+
+// Connect Database
+connectDB();
 
                             // sends data to the browser
 app.get('/', (req, res) => res.send('API Running'));
